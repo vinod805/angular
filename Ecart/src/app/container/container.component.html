@@ -1,0 +1,44 @@
+<div class="ekart--product--container">
+<!-- <img [src]="product.pImage">
+<p>Name:{{product.name}}</p>
+<p>Price:{{product.price}}</p>
+<p>Color:{{product.color}}</p>
+<p>DiscountPrice:{{getDiascountPrice()}}</p>
+<p>Stock:{{ product.stock>0?            'Only '+product.stock+' are Left':'Not in stock'}}</p>
+<button (click)="decrrmrntCartValue()">-</button>
+<span>{{addToCart}}</span>
+<button (click)="incrementCartValue()" >+</button> -->
+<app-search (searchTextChanged)="setSearchText($event)"></app-search>
+<app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+<app-product-detail *ngIf="productListComponent.selectedProduct"  [productListComp]="productListComponent"></app-product-detail>
+<div class="ecart-featured-products">
+    <div class="ecart-featured-product-heading">
+        <h1>latest Arrivals in popular Brands</h1>
+    </div>
+
+   <app-featured-brands>
+    <h3 class="title">New Arrivals in Nike</h3>
+    <button class="call-to-action">Show New Arrivals In Nike</button>
+   </app-featured-brands>
+   <app-featured-brands>
+    <h3 class="title">New Arrivals in Addidas</h3>
+    <button class="call-to-action">Show New Arrivals In Addidas</button>
+
+   </app-featured-brands>
+
+   <app-featured-brands>
+        <h3 class="title">New Arrivals in Reebok</h3>
+    <button class="call-to-action">Show New Arrivals In Reebok</button>
+
+   </app-featured-brands>
+
+   
+
+</div>
+
+
+</div> 
+
+
+
+
